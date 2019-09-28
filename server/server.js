@@ -7,9 +7,25 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
-
+var express = require("express");
 var app = module.exports = loopback();
-
+var bodyParser = require('body-parser');
+var path = require('path');
+app.middleware('initial', bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs'); 
+app.set('json spaces', 2); // format json responses for easier viewing
+var cookieParser = require('cookie-parser');
+app.use(cookieParser('propertyweb'));
+app.set('views', path.resolve(__dirname, 'views'));
+app.use('/assets',express.static(path.resolve(__dirname, 'assets')))
+app.use(loopback.token({  
+  model: app.models.accessToken,
+  currentUserLiteral: 'me',
+  searchDefaultTokenKeys: false,
+  cookies: ['access_token'],
+  headers: ['access_token', 'X-Access-Token'],
+  params: ['access_token']
+}));
 app.start = function() {
   // start the web server
   return app.listen(function() {
