@@ -44,5 +44,9 @@
   "UserInfo": {
     "dataSource": "db",
     "public": true
+  },
+  "PropertyDetails": {
+    "dataSource": "db",
+    "public": true
   }
 }

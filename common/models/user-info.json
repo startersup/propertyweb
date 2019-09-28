@@ -37,9 +37,22 @@
         "nullable": "T"
       }
     },
-    "phone": {
+    "primary_mobile": {
       "type": "string",
       "required": true
+    },
+    "secondary_mobile": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "area_code": {
+      "type": "string"
     },
     "address": {
       "type": "string"
@@ -49,26 +62,11 @@
   },
   "validations": [],
   "relations": {
-    "departments": {
-      "type": "belongsTo",
-      "model": "Department",
-      "foreignKey": "department"
-    },
-    "sites": {
-      "type": "belongsTo",
-      "model": "Site",
-      "foreignKey": "site"
-    },
     "roles": {
       "type": "hasMany",
       "model": "Role",
       "foreignKey": "principalId",
       "through": "RoleMapping"
-    },
-    "orders": {
-      "type": "hasMany",
-      "model": "PurchaseOrder",
-      "foreignKey": "createdBy"
     }
   },
   "acls": [
