@@ -22,7 +22,7 @@
     "nodemon": "^1.19.1",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0",
-    "swagger-ui": "^3.23.6"
+    "swagger-ui": "^3.18.0"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
