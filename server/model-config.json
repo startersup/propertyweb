@@ -48,5 +48,13 @@
   "PropertyDetails": {
     "dataSource": "db",
     "public": true
+  },
+  "City": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Area": {
+    "dataSource": "db",
+    "public": false
   }
 }
