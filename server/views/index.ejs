@@ -15,12 +15,45 @@
         <link rel="apple-touch-icon" size="32x32" type="image/png" href="assets/images/favicon.png"/>
         <link rel="apple-touch-icon" size="192x192" type="image/png" href="assets/images/favicon.png"/>
         <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/location.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="assets/css/style.css">
        <script src="assets/js/bootstrap.min.js"></script>
+       <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
  
     </head>
-    <body>
+    <body onload="initialize()"> 
     <%- include('navbar.ejs') %>
+    <section class="mainBanner">
+<div class="container">
+<div class="row">
+<div class="col-md-9 col-xs-12">
+  <div class="searcher">
+    <h1>Srilanka's Largest Property Search Directory</h1>
+    <p>Search for your dream property from more than 100000+ listings</p>
+      <form class="search" action="">
+        <input  class="controls" type="text" placeholder="Search for Property, Location, Landmarks.. " name="pick" required="" >
+        <button type="submit"><i class="fa fa-search"></i> <span>Search</span></button>
+      </form>
+</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+    </section>
+<section class="quicklinks">
+<div class="container">
+    <div class="scrolling-wrapper">
+        <div class="card"><img class="center" src="assets/images/icons/house.png"><p>Individual Villa</p></div>
+        <div class="card"><img class="center" src="assets/images/icons/apartments.png"><p>Apartments</p></div>
+        <div class="card"><img class="center" src="assets/images/icons/workspace.png"><p>Workspace</p></div>
+       
+      </div>
+</div>
+</section>
+
     </body></html>
