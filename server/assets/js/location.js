@@ -6,3 +6,9 @@ $.ajax({
       $('#city').html(location.city);
     }
   });
+
+
+
+  
+
+  
